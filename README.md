@@ -1,1 +1,1 @@
-PeerConnect-
+PeerConnect-Mentoring Platform
