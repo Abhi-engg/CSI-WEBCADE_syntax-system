@@ -1,0 +1,96 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Connect container styles */
+  .connect-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styles */
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Seniors list styles */
+  .seniors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Senior profile styles */
+  .senior-profile {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Senior photo styles */
+  .senior-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  /* Senior info styles */
+  .senior-info {
+    flex: 1;
+  }
+  
+  /* Name styles */
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* College styles */
+  .college {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Skills styles */
+  .skills {
+    font-size: 18px;
+    color: #337ab7;
+    margin-bottom: 10px;
+  }
+  
+  /* Bio styles */
+  .bio {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  /* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7cac9; /* Mixed background color */
+  }
+  
+  /* Connect container styles */
+  .connect-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 200 200 10px rgba(115, 7, 7, 0.162);
+  }
+  
+  /* ... rest of the CSS code remains the same ... */

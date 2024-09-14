@@ -1,0 +1,184 @@
+<!-- Mentor Profile Section -->
+<section id="mentor-profile">
+    <h2>Mentor Profile</h2>
+    <form id="mentor-form">
+      <!-- Profile Picture -->
+      <div class="profile-picture">
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" name="profile-picture">
+      </div>
+  
+      <!-- Personal Information -->
+      <h3>Personal Information</h3>
+      <div class="personal-info">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br><br>
+      </div>
+  
+      <!-- Professional Experience -->
+      <h3>Professional Experience</h3>
+      <div class="professional-experience">
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company"><br><br>
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" name="job-title"><br><br>
+        <label for="industry">Industry:</label>
+        <input type="text" id="industry" name="industry"><br><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+      </div>
+  
+      <!-- Education -->
+      <h3>Education</h3>
+      <div class="education">
+        <label for="school">School:</label>
+        <input type="text" id="school" name="school"><br><br>
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree"><br><br>
+        <label for="field-of-study">Field of Study:</label>
+        <input type="text" id="field-of-study" name="field-of-study"><br><br>
+      </div>
+  
+      <!-- Skills -->
+      <h3>Skills</h3>
+      <div class="skills">
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills"><br><br>
+      </div>
+  
+      <!-- Submit Button -->
+      <input type="submit" value="Save Profile">
+    </form>
+  
+    <!-- Display Users -->
+    <h2>Mentors</h2>
+    <ul id="mentors-list"></ul>
+  </section>
+  
+  <style>
+    /* Add some basic styling */
+    #mentor-profile {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    #mentor-profile h2 {
+      margin-top: 0;
+    }
+  
+    #mentor-profile h3 {
+      margin-top: 20px;
+    }
+  
+    .profile-picture {
+      margin-bottom: 20px;
+    }
+  
+    .personal-info, .professional-experience, .education, .skills {
+      margin-bottom: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+  
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  
+    #mentors-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    #mentors-list li {
+      margin-bottom: 20px;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    #mentors-list li:last-child {
+      border-bottom: none;
+    }
+  
+    #mentors-list h3 {
+      margin-top: 0;
+    }
+  </style>
+  
+  <script>
+    // Store user data in an array
+    let mentors = [];
+  
+    // Add event listener to form submission
+    document.getElementById('mentor-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+  
+      // Get form data
+      const formData = new FormData(document.getElementById('mentor-form'));
+      const mentorData = {};
+      formData.forEach((value, key) => {
+        mentorData[key] = value;
+      });
+  
+      // Add mentor data to array
+      mentors.push(mentorData);
+  
+      // Display mentors
+      displayMentors();
+    });
+  
+    // Display mentors
+    function displayMentors() {
+      const mentorsList = document.getElementById('mentors-list');
+      mentorsList.innerHTML = '';
+  
+      mentors.forEach((mentor) => {
+        const mentorHTML = `
+          <li>
+            <h3>${mentor.name}</h3>
+            <p>Email: ${mentor.email}</p>
+            <p>Phone: ${mentor.phone}</p>
+            <p>Location: ${mentor.location}</p>
+            <p>Company: ${mentor.company}</p>
+            <p>Job Title: ${mentor.jobTitle}</p>
+            <p>Industry: ${mentor.industry}</p>
+            <p>Description: ${mentor.description}</p>
+            <p>School: ${mentor.school}</p>
+            <p>Degree: ${mentor.degree}</p>
+            <p>Field of Study: ${mentor.fieldOfStudy}</p>
+            <p>Skills: ${mentor.skills}</p>
+          </li>
+        `;
+        mentorsList.innerHTML += mentorHTML;
+      });
+    }
+  </script>
