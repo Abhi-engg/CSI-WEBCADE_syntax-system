@@ -1,8 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Connect Page</title>
-	<link rel="stylesheet" href="connsty.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Connect with Mentors - PeerConnect</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--primary-color: #4A90E2;
+			--secondary-color: #F5A623;
+			--background-color: #F0F4F8;
+			--text-color: #333;
+			--white: #FFFFFF;
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			background-color: var(--background-color);
+			color: var(--text-color);
+			margin: 0;
+			padding: 0;
+		}
+
+		.connect-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+
+		.title {
+			color: var(--primary-color);
+			text-align: center;
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+		}
+
+		.seniors-list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+		}
+
+		.senior-profile {
+			background-color: var(--white);
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			transition: transform 0.3s ease;
+		}
+
+		.senior-profile:hover {
+			transform: translateY(-5px);
+		}
+
+		.senior-photo {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.senior-info {
+			padding: 1.5rem;
+		}
+
+		.name {
+			color: var(--primary-color);
+			margin: 0 0 0.5rem;
+		}
+
+		.college, .skills, .bio {
+			margin: 0.5rem 0;
+		}
+
+		.chat-request-button {
+			background-color: var(--secondary-color);
+			color: var(--white);
+			border: none;
+			padding: 0.75rem 1.5rem;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			font-weight: 600;
+			margin-top: 1rem;
+		}
+
+		.chat-request-button:hover {
+			background-color: #E09511;
+		}
+	</style>
 </head>
 <body>
 	<div class="connect-container">
@@ -10,27 +96,70 @@
 		<div class="seniors-list">
 			<!-- Senior 1 -->
 			<div class="senior-profile">
-				<img src="senior1-photo.jpg" alt="Senior 1 Photo" class="senior-photo">
+				<img src="image/senior1-photo.jpg" alt="Senior 1 Photo" class="senior-photo">
 				<div class="senior-info">
 					<h2 class="name">Abhijeet Yadav</h2>
 					<p class="college">Mumbai University</p>
 					<p class="skills">Skills: Python, JavaScript, Data Analysis</p>
-					<p class="bio"></p>
-                    <button class="chat-request-button">Chat with Senior</button>
+					<p class="bio">Passionate about coding and helping others learn.</p>
+					<button class="chat-request-button">Chat with Senior</button>
 				</div>
 			</div>
 			<!-- Senior 2 -->
 			<div class="senior-profile">
-				<img src="senior2-photo.jpg" alt="Senior 2 Photo" class="senior-photo">
+				<img src="image/senior2-photo.jpg" alt="Senior 2 Photo" class="senior-photo">
 				<div class="senior-info">
 					<h2 class="name">Satyaprakash Yadav</h2>
-					<p class="college">MIT(Maharashtra Institute of Technology)</p>
+					<p class="college">MIT (Maharashtra Institute of Technology)</p>
 					<p class="skills">Skills: Java, Machine Learning, Web Development</p>
-					<p class="bio"></p>
-                    <button class="chat-request-button">Chat with Senior</button>
+					<p class="bio">Experienced in building AI-powered web applications.</p>
+					<button class="chat-request-button">Chat with Senior</button>
 				</div>
 			</div>
-			<!-- Add more senior profiles here -->
+			<!-- Senior 3 -->
+			<div class="senior-profile">
+				<img src="image/senior3-photo.jpg" alt="Senior 3 Photo" class="senior-photo">
+				<div class="senior-info">
+					<h2 class="name">Priya Sharma</h2>
+					<p class="college">IIT Bombay</p>
+					<p class="skills">Skills: C++, Data Structures, Algorithms</p>
+					<p class="bio">Competitive programmer with a knack for problem-solving.</p>
+					<button class="chat-request-button">Chat with Senior</button>
+				</div>
+			</div>
+			<!-- Senior 4 -->
+			<div class="senior-profile">
+				<img src="image/senior4-photo.jpg" alt="Senior 4 Photo" class="senior-photo">
+				<div class="senior-info">
+					<h2 class="name">Rahul Gupta</h2>
+					<p class="college">BITS Pilani</p>
+					<p class="skills">Skills: React, Node.js, MongoDB</p>
+					<p class="bio">Full-stack developer with a focus on MERN stack.</p>
+					<button class="chat-request-button">Chat with Senior</button>
+				</div>
+			</div>
+			<!-- Senior 5 -->
+			<div class="senior-profile">
+				<img src="image/senior5-photo.jpg" alt="Senior 5 Photo" class="senior-photo">
+				<div class="senior-info">
+					<h2 class="name">Ananya Patel</h2>
+					<p class="college">NIT Surat</p>
+					<p class="skills">Skills: UI/UX Design, Frontend Development</p>
+					<p class="bio">Passionate about creating beautiful and intuitive user interfaces.</p>
+					<button class="chat-request-button">Chat with Senior</button>
+				</div>
+			</div>
+			<!-- Senior 6 -->
+			<div class="senior-profile">
+				<img src="image/senior6-photo.jpg" alt="Senior 6 Photo" class="senior-photo">
+				<div class="senior-info">
+					<h2 class="name">Vikram Singh</h2>
+					<p class="college">Delhi Technological University</p>
+					<p class="skills">Skills: Cybersecurity, Ethical Hacking</p>
+					<p class="bio">Dedicated to making the digital world a safer place.</p>
+					<button class="chat-request-button">Chat with Senior</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
