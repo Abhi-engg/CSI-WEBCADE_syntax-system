@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		.signup-form {
+			width: 300px;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.signup-form label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.signup-form input[type="text"], .signup-form input[type="email"], .signup-form input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+		}
+		.signup-form button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.signup-form button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		/* Add visible focus states */
+		.signup-form input:focus {
+			outline: 2px solid #4CAF50;
+		}
+		/* Add error message styles */
+		.error-message {
+			color: red;
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+    <center>
+	<div class="signup-form">
+		<h2>Signup</h2>
+		<form action="interface.html" method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required><br><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" autocomplete="email" required><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" autocomplete="new-password" required><br><br>
+			<label for="confirm-password">Confirm Password:</label>
+			<input type="password" id="confirm-password" name="confirm-password" required><br><br>
+			<button type="submit">Signup</button>
+			<div class="error-message" id="signup-error"></div>
+		</form>
+	</div>
+
+	<script>
+		// Add event listener to submit button to disable it after click
+		document.querySelector('button[type="submit"]').addEventListener('click', () => {
+			this.disabled = true;
+		});
+	</script>
+    </center>
+</body>
+</html>
