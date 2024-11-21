@@ -1,105 +1,210 @@
 <!-- Student Information Form -->
 <form id="student-info-form">
-    <!-- Section 1: Personal Information -->
-    <h2>Personal Information</h2>
-    <div class="form-group">
-      <label for="full-name">Full Name:</label>
-      <input type="text" id="full-name" name="full-name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-    </div>
-    <div class="form-group">
-      <label for="phone-number">Phone Number:</label>
-      <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" required>
-    </div>
-    <div class="form-group">
-      <label for="date-of-birth">Date of Birth:</label>
-      <input type="date" id="date-of-birth" name="date-of-birth" required>
-    </div>
-    <div class="form-group">
-      <label for="profile-photo">Profile Photo:</label>
-      <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
-    </div>
-  
-    <!-- Section 2: Academic Information -->
-    <h2>Academic Information</h2>
-    <div class="form-group">
-      <label for="major-field-of-study">Major/Field of Study:</label>
-      <input type="text" id="major-field-of-study" name="major-field-of-study" required>
-    </div>
-    <div class="form-group">
-      <label for="year-of-study">Year of Study:</label>
-      <select id="year-of-study" name="year-of-study" required>
-        <option value="">Select</option>
-        <option value="Freshman">Freshman</option>
-        <option value="Sophomore">Sophomore</option>
-        <option value="Junior">Junior</option>
-        <option value="Senior">Senior</option>
-      </select>
-      
-    <!-- Submit Button -->
-    <button type="submit">Submit</button>
-  </form>
-  
-  <!-- Add some basic styling -->
-  <style>
-    .form-group {
-      margin-bottom: 20px;
+  <!-- Section 1: Personal Information -->
+  <h2>Personal Information</h2>
+  <div class="form-group">
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" name="full-name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+  </div>
+  <div class="form-group">
+    <label for="phone-number">Phone Number:</label>
+    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" required>
+  </div>
+  <div class="form-group">
+    <label for="date-of-birth">Date of Birth:</label>
+    <input type="date" id="date-of-birth" name="date-of-birth" required>
+  </div>
+  <div class="form-group">
+    <label for="profile-photo">Profile Photo:</label>
+    <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
+  </div>
+
+  <!-- Section 2: Academic Information -->
+  <h2>Academic Information</h2>
+  <div class="form-group">
+    <label for="major-field-of-study">Major/Field of Study:</label>
+    <input type="text" id="major-field-of-study" name="major-field-of-study" required>
+  </div>
+  <div class="form-group">
+    <label for="year-of-study">Year of Study:</label>
+    <select id="year-of-study" name="year-of-study" required>
+      <option value="">Select</option>
+      <option value="Freshman">Freshman</option>
+      <option value="Sophomore">Sophomore</option>
+      <option value="Junior">Junior</option>
+      <option value="Senior">Senior</option>
+    </select>
+  </div>
+    
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Advanced styling -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #student-info-form {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  #student-info-form:hover {
+    transform: translateY(-5px);
+  }
+
+  h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-weight: 500;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .form-group:hover label {
+    color: #3498db;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    background-color: #ffffff;
+  }
+
+  button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  }
+
+  input[type="file"] {
+    border: 2px dashed #bdc3c7;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  input[type="file"]:hover {
+    border-color: #3498db;
+    background-color: #ecf0f1;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%233498db" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: 50%;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 768px) {
+    #student-info-form {
+      padding: 30px;
     }
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
-    button[type="submit"] {
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button[type="submit"]:hover {
-      background-color: #3e8e41;
-    }
-  </style>
-  
-  <!-- JavaScript code to store form data -->
-  <script>
-    const form = document.getElementById('student-info-form');
-    const formData = {};
-  
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-  
-      formData.fullName = document.getElementById('full-name').value;
-      formData.email = document.getElementById('email').value;
-      formData.phoneNumber = document.getElementById('phone-number').value;
-      formData.dateOfBirth = document.getElementById('date-of-birth').value;
-      formData.majorFieldOfStudy = document.getElementById('major-field-of-study').value;
-      formData.yearOfStudy = document.getElementById('year-of-study').value;
-  
-      // Get the profile photo file
-      const profilePhotoFile = document.getElementById('profile-photo').files[0];
-  
-      // Store form data in local storage
-      localStorage.setItem('formData', JSON.stringify(formData));
-  
-      // Store profile photo in local storage
-      const reader = new FileReader();
-      reader.onload = () => {
-        const profilePhotoData = reader.result;
-        localStorage.setItem('profilePhoto', profilePhotoData);
-      };
-      reader.readAsDataURL(profilePhotoFile);
-  
-      // Redirect to profile page
-      window.location.href = 'profile.html';
-    });
-  </script>
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  #student-info-form {
+    animation: fadeIn 0.5s ease-out;
+  }
+</style>
+
+<!-- JavaScript code to store form data -->
+<script>
+  const form = document.getElementById('student-info-form');
+  const formData = {};
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    formData.fullName = document.getElementById('full-name').value;
+    formData.email = document.getElementById('email').value;
+    formData.phoneNumber = document.getElementById('phone-number').value;
+    formData.dateOfBirth = document.getElementById('date-of-birth').value;
+    formData.majorFieldOfStudy = document.getElementById('major-field-of-study').value;
+    formData.yearOfStudy = document.getElementById('year-of-study').value;
+
+    // Get the profile photo file
+    const profilePhotoFile = document.getElementById('profile-photo').files[0];
+
+    // Store form data in local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    // Store profile photo in local storage
+    const reader = new FileReader();
+    reader.onload = () => {
+      const profilePhotoData = reader.result;
+      localStorage.setItem('profilePhoto', profilePhotoData);
+    };
+    reader.readAsDataURL(profilePhotoFile);
+
+    // Redirect to profile page
+    window.location.href = 'profile.html';
+  });
+</script>

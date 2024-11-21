@@ -1,28 +1,147 @@
-<!-- Profile Page -->
-<h2>Profile</h2>
-
-<!-- Display form data -->
-<div id="profile-data" style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
-  <img id="profile-photo" src="" alt="Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
-  <p>Full Name: <span id="full-name" style="font-weight: bold;"></span></p>
-  <p>Email Address: <span id="email" style="font-weight: bold;"></span></p>
-  <p>Phone Number: <span id="phone-number" style="font-weight: bold;"></span></p>
-  <p>Date of Birth: <span id="date-of-birth" style="font-weight: bold;"></span></p>
-  <p>Major/Field of Study: <span id="major-field-of-study" style="font-weight: bold;"></span></p>
-  <p>Year of Study: <span id="year-of-study" style="font-weight: bold;"></span></p>
+<!-- PeerConnect Dashboard -->
+<div class="dashboard-container">
+  <div class="sidebar">
+    <div class="profile-header">
+      <img id="profile-photo" src="" alt="Profile Photo" class="profile-photo">
+      <h2 id="full-name"></h2>
+      <button id="edit-profile-btn" class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+    </div>
+    <p id="major-field-of-study" class="major"></p>
+    <p id="year-of-study" class="year"></p>
+    <nav>
+      <ul>
+        <li><a href="#overview"><i class="fas fa-chart-line"></i> Overview</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="#connections"><i class="fas fa-users"></i> Connections</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="main-content">
+    <section id="overview">
+      <h2>Overview</h2>
+      <div class="stats">
+        <div class="stat-box">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Completed Projects</h3>
+          <p>12</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-users"></i>
+          <h3>Connections</h3>
+          <p>78</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-star"></i>
+          <h3>Average Rating</h3>
+          <p>4.7</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects">
+      <h2>Recent Projects</h2>
+      <table class="project-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Team Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fas fa-check-circle completed"></i></td>
+            <td>AI Chatbot</td>
+            <td class="tech">Technology</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-clock ongoing"></i></td>
+            <td>Sustainable Energy Solution</td>
+            <td class="environment">Environment</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-check-circle completed"></i></td>
+            <td>Community Health App</td>
+            <td class="health">Health</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="skills">
+      <h2>Top Skills</h2>
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+            <th>Endorsements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Python</td>
+            <td>Advanced</td>
+            <td class="positive">23</td>
+          </tr>
+          <tr>
+            <td>Project Management</td>
+            <td>Intermediate</td>
+            <td class="positive">17</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="progress">
+      <h2>Skill Progress</h2>
+      <div class="progress-board">
+        <div class="progress-item">
+          <h3>Technical Skills</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+          <p>85/100</p>
+        </div>
+        <div class="progress-item">
+          <h3>Soft Skills</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+          </div>
+          <p>70/100</p>
+        </div>
+        <div class="progress-item">
+          <h3>Leadership Skills</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+          <p>60/100</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 
-<!-- JavaScript code to display form data -->
+
 <script>
   const formData = JSON.parse(localStorage.getItem('formData'));
   const profilePhotoData = localStorage.getItem('profilePhoto');
 
   document.getElementById('full-name').textContent = formData.fullName;
-  document.getElementById('email').textContent = formData.email;
-  document.getElementById('phone-number').textContent = formData.phoneNumber;
-  document.getElementById('date-of-birth').textContent = formData.dateOfBirth;
   document.getElementById('major-field-of-study').textContent = formData.majorFieldOfStudy;
   document.getElementById('year-of-study').textContent = formData.yearOfStudy;
-
   document.getElementById('profile-photo').src = profilePhotoData;
+
+  // Additional JavaScript for dynamic content (projects, skills, progress) would go here
+
+  // Add event listener for edit profile button
+  document.getElementById('edit-profile-btn').addEventListener('click', function() {
+    window.location.href = 'edit-profile.html';
+  });
 </script>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 30px;
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.sidebar h2 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.major, .year {
+  font-size: 0.9em;
+  color: #bdc3c7;
+  margin: 5px 0;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+  color: #3498db;
+}
+
+.sidebar nav ul li a i {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.main-content h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  margin: 0 10px;
+}
+
+.stat-box i {
+  font-size: 2em;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.stat-box h3 {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.project-table, .skills-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.project-table th, .project-table td,
+.skills-table th, .skills-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.project-table th, .skills-table th {
+  background-color: #f5f5f5;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.project-table tbody tr, .skills-table tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.completed {
+  color: #2ecc71;
+}
+
+.ongoing {
+  color: #f39c12;
+}
+
+.tech {
+  color: #3498db;
+}
+
+.environment {
+  color: #27ae60;
+}
+
+.health {
+  color: #e74c3c;
+}
+
+.positive {
+  color: #2ecc71;
+}
+
+.progress-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.progress-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.progress-item h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.progress-bar {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #3498db;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-item p {
+  margin-top: 10px;
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.edit-profile-btn {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.edit-profile-btn:hover {
+  background-color: #2980b9;
+}
